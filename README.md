@@ -120,3 +120,11 @@ Decide whether ESP32 is sufficient long-term.
 ---
 
 ## 📁 Project Structure
+bt_audio_player/
+├── CMakeLists.txt
+├── sdkconfig
+└── main/
+├── CMakeLists.txt
+└── main.c
+
+
