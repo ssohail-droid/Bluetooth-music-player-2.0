@@ -1,11 +1,11 @@
-## 📌 Project Overview
+## Project Overview
 This project builds a **Bluetooth Classic A2DP audio player** using an **ESP32** and **ESP-IDF**, with a strong focus on **correct system architecture**, **power behavior**, and **real RF limitations**.
 
 The project intentionally avoids “magic software fixes” and instead documents what **is and is not possible** with ESP32 Bluetooth, providing a solid foundation for a future hardware revision.
 
 ---
 
-## 🎯 Project Objectives
+##  Project Objectives
 - Build a **stable A2DP Source** using ESP-IDF
 - Understand **Bluetooth power and RF limits**
 - Avoid unnecessary complexity and unstable hacks
@@ -14,7 +14,7 @@ The project intentionally avoids “magic software fixes” and instead document
 
 ---
 
-## 🧱 Hardware
+##  Hardware
 - ESP32 Dev Board (WROOM-class)
 - USB power (development & testing)
 - Bluetooth headphones (A2DP sink)
@@ -22,7 +22,7 @@ The project intentionally avoids “magic software fixes” and instead document
 
 ---
 
-## 🧠 Design Philosophy
+##  Design Philosophy
 This project is structured in **phases**.  
 Each phase is validated before moving on to avoid compounding bugs or false assumptions.
 
@@ -31,9 +31,9 @@ Each phase is validated before moving on to avoid compounding bugs or false assu
 
 ---
 
-## 🗺️ Project Roadmap
+##  Project Roadmap
 
-### ✅ Phase 0 — Environment Sanity
+###  Phase 0 — Environment Sanity
 **Goal:**  
 Verify ESP-IDF, flash configuration, and board stability.
 
@@ -44,7 +44,7 @@ Verify ESP-IDF, flash configuration, and board stability.
 
 ---
 
-### ✅ Phase 1 — Bluetooth Baseline
+###  Phase 1 — Bluetooth Baseline
 **Goal:**  
 Initialize Classic Bluetooth and A2DP Source with **no audio yet**.
 
@@ -55,7 +55,7 @@ Initialize Classic Bluetooth and A2DP Source with **no audio yet**.
 
 ---
 
-### ⏭ Phase 2 — Audio Test Tone
+### Phase 2 — Audio Test Tone
 **Goal:**  
 Verify actual A2DP audio streaming.
 
@@ -66,7 +66,7 @@ Verify actual A2DP audio streaming.
 
 ---
 
-### ⏭ Phase 3 — Power Behavior Analysis
+###  Phase 3 — Power Behavior Analysis
 **Goal:**  
 Understand power usage in different states.
 
@@ -77,7 +77,7 @@ Understand power usage in different states.
 
 ---
 
-### ⏭ Phase 4 — SD Card WAV Playback
+###  Phase 4 — SD Card WAV Playback
 **Goal:**  
 Replace test tone with real audio.
 
@@ -88,7 +88,7 @@ Replace test tone with real audio.
 
 ---
 
-### ⏭ Phase 5 — UI & Controls
+###  Phase 5 — UI & Controls
 **Goal:**  
 Human interaction without breaking stability.
 
@@ -99,7 +99,7 @@ Human interaction without breaking stability.
 
 ---
 
-### ⏭ Phase 6 — Hardware v2 Decision
+###  Phase 6 — Hardware v2 Decision
 **Goal:**  
 Decide whether ESP32 is sufficient long-term.
 
@@ -110,7 +110,7 @@ Decide whether ESP32 is sufficient long-term.
 
 ---
 
-## 🔧 Software Stack
+##  Software Stack
 - ESP-IDF v5.5.x
 - Classic Bluetooth (Bluedroid host)
 - A2DP Source profile
@@ -118,13 +118,4 @@ Decide whether ESP32 is sufficient long-term.
 - Minimal, explicit configuration via `menuconfig`
 
 ---
-
-## 📁 Project Structure
-bt_audio_player/
-├── CMakeLists.txt
-├── sdkconfig
-└── main/
-├── CMakeLists.txt
-└── main.c
-
 
